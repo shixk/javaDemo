@@ -3,7 +3,13 @@
   <groupId>xuekaiTest</groupId>
   <artifactId>xuekaiTest</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  
+
+    <!-- 模块变量 -->
+    <properties>
+        <!-- 各依赖的全局版本 -->
+        <spring.version>4.3.12.RELEASE</spring.version>
+    </properties>
+
   <dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -34,6 +40,47 @@
           <groupId>com.google.guava</groupId>
           <artifactId>guava</artifactId>
           <version>23.2-jre</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-beans</artifactId>
+          <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-context</artifactId>
+          <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-aop</artifactId>
+          <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-aspects</artifactId>
+          <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-context-support</artifactId>
+          <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-jdbc</artifactId>
+          <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-tx</artifactId>
+          <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-expression</artifactId>
+          <version>${spring.version}</version>
       </dependency>
 	</dependencies>
 
