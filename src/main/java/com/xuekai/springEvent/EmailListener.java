@@ -1,12 +1,14 @@
 package com.xuekai.springEvent;
 
 import org.springframework.context.ApplicationListener;
+import org.springframework.stereotype.Component;
 
 /**
  * @Author shixuekai
  * @CreateDate 2017/12/14
  * @Description
  **/
+@Component
 public class EmailListener implements ApplicationListener<RegisterEvent>{
     @Override
     public void onApplicationEvent(RegisterEvent registerEvent) {
