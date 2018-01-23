@@ -1,6 +1,7 @@
 package com.xuekai.controller;
 
 import java.util.HashMap;
+import java.util.concurrent.locks.ReentrantLock;
 
 import com.xuekai.entity.People;
 
@@ -35,7 +36,9 @@ public class TestController {
 	
 	public static void main(String[] args) {
 
-		
+		ReentrantLock lock=new ReentrantLock();
+
+
 		long a=-1l;
 
 		if(a==-1){
