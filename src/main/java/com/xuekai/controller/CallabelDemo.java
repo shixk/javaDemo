@@ -36,7 +36,6 @@ public class CallabelDemo {
 		MyCallable c3=new MyCallable(3);
 		
 		// 创建一个执行任务的服务
-
         ExecutorService es = Executors.newFixedThreadPool(3);
         try{
         	Future future1=es.submit(c1);

@@ -11,7 +11,7 @@ import org.apache.curator.retry.RetryNTimes;
  */
 public class ClientTest {
 	
-	static String ZK_ADDRESS="10.120.124.172:2181";
+	static String ZK_ADDRESS="10.5.235.173:2181";
 	static String ZK_PATH="/zktest";
 	public static void main(String[] args) throws Exception {
 		//1.connect zk
@@ -25,8 +25,7 @@ public class ClientTest {
 		
 		 // 2.2 Get node and data  
         print(client.getData().forPath(ZK_PATH));
-		
-		
+
 	}
 	
 	private static void print(Object result) {

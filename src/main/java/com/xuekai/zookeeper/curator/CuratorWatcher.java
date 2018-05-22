@@ -15,7 +15,7 @@ import org.apache.curator.retry.RetryNTimes;
  *
  */
 public class CuratorWatcher {
-	static String ZK_ADDRESS="10.120.124.172:2181";
+	static String ZK_ADDRESS="10.5.235.173:2181";
 	static String ZK_PATH="/zktest";
 	public static void main(String[] args) throws Exception {
 		// 1.Connect to zk

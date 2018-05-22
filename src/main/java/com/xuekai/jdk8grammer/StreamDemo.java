@@ -2,6 +2,7 @@ package com.xuekai.jdk8grammer;
 
 import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.ListeningExecutorService;
+import com.xuekai.entity.People;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,5 +31,11 @@ public class StreamDemo {
                 System.out.println(a);
             }
         });
+
+
+        int s=list.stream().filter(a->a!=null).mapToInt(Integer::new).sum();
+
+        System.out.println("--------------");
+        System.out.println(s);
     }
 }
