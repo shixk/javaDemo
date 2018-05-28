@@ -15,9 +15,9 @@ import java.nio.file.StandardOpenOption;
  **/
 public class NoBlockingClient {
 
-    private static String source="/Users/shixuekai/Downloads/33.jpg";
+    private static String source="/Users/shixuekai/Downloads/55.jpg";
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
         // 1. 获取通道
         SocketChannel socketChannel = SocketChannel.open(new InetSocketAddress("127.0.0.1", 6666));
         // 2.读取文件
@@ -32,6 +32,17 @@ public class NoBlockingClient {
             // 通过管道传输数据
             socketChannel.write(buffer);
             // 将数据清空，等待填充接下来的数据
+            buffer.clear();
+        }
+
+        // 接收server的响应
+        int len=0;
+
+        while ((len=socketChannel.read(buffer))!=-1){
+            buffer.flip();
+
+            System.out.println(new String(buffer.array(),0,len));
+
             buffer.clear();
         }
 

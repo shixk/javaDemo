@@ -29,6 +29,8 @@ public class NoBlockingServer {
         // 4.1将通道注册到选择器上，指定接收“监听通道”事件
         server.register(selector, SelectionKey.OP_ACCEPT);
 
+        System.out.println("server is ready");
+
         while(selector.select()>0){
             // 6. 获取当前选择器所有注册的“选择键”(已就绪的监听事件)
             Iterator<SelectionKey> iterator = selector.selectedKeys().iterator();
@@ -63,8 +65,14 @@ public class NoBlockingServer {
                         buffer.clear();
                     }
 
-                    fileChannel.close();
+                    buffer.put("img is success".getBytes());
+                    buffer.flip();
+                    clientChannel.write(buffer);
+                    buffer.clear();
 
+                    //关闭通道
+                    fileChannel.close();
+                    clientChannel.close();
                 }
 
             }
