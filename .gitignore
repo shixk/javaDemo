@@ -8,8 +8,8 @@ logPath_IS_UNDEFINED
 disconf
 
 # idea ignore
-.idea
-*.iml
+/.idea/
+/*.iml
 
 # maven ignore
 target
