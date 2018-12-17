@@ -6,6 +6,14 @@ public class People {
 
 	private String subNo;
 
+	public People(String name,Integer age,String subNo){
+		this.age=age;
+		this.name=name;
+		this.subNo=subNo;
+	}
+
+	public People(){}
+
 	public String getSubNo() {
 		return subNo;
 	}
