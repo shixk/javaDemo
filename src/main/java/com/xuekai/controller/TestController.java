@@ -36,13 +36,11 @@ public class TestController {
 	
 	public static void main(String[] args) {
 
-		ReentrantLock lock=new ReentrantLock();
+		ClassLoader loader= TestController.class.getClassLoader();
 
-
-		long a=-1l;
-
-		if(a==-1){
-			System.out.println("yes");
+		while (null!=loader){
+			System.out.println(loader);
+			loader=loader.getParent();
 		}
 		
 	}
