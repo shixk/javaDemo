@@ -4,6 +4,7 @@ import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.ListeningExecutorService;
 import com.xuekai.DesignPattern.builderPattern.Person;
 import com.xuekai.entity.People;
+import com.xuekai.utils.JsonTool;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -71,9 +72,13 @@ public class StreamDemo {
         peopleList.add(p6);
 
         List<Integer> ageList=new ArrayList<>();
+        Integer sum=0;
+        sum=peopleList.stream().filter(p->p.getSubNo().equals("1002")).mapToInt(People::getAge).sum();
 
-        ageList=peopleList.stream().filter(p->p.getSubNo().equals("1001")).map(People::getAge).collect(Collectors.toList());
+        System.out.println(sum);
 
-        System.out.println(ageList);
+        System.out.println(JsonTool.writeToString(peopleList));
+        peopleList.sort((pk,pc)-> pk.getAge().compareTo(pc.getAge()));
+        System.out.println(JsonTool.writeToString(peopleList));
     }
 }
