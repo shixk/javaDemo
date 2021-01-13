@@ -3,6 +3,7 @@ package com.xuekai.enums;
 import com.google.common.collect.Maps;
 import com.xuekai.entity.People;
 import com.xuekai.entity.Student;
+import com.xuekai.utils.SpringUtil;
 import lombok.Getter;
 
 import java.util.Map;
@@ -36,5 +37,11 @@ public enum NameAndClassPairEnum {
 
     public static NameAndClassPairEnum getNameAndClass(String beanName){
         return map.get(beanName);
+    }
+
+    public People getActuator(String beanName){
+        NameAndClassPairEnum pairEnum = getNameAndClass(beanName);
+
+        return SpringUtil.getBean(pairEnum.getClazz());
     }
 }

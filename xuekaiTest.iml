@@ -17,8 +17,8 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:3.8.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.activemq:activemq-all:5.10.0" level="project" />
-    <orderEntry type="library" name="Maven: com.rabbitmq:amqp-client:4.0.2" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.21" level="project" />
+    <orderEntry type="library" name="Maven: com.rabbitmq:amqp-client:5.6.0" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.25" level="project" />
     <orderEntry type="library" name="Maven: org.apache.curator:curator-recipes:2.7.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.curator:curator-framework:2.7.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.curator:curator-client:2.7.0" level="project" />

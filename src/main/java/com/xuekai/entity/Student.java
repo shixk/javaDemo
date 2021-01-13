@@ -1,6 +1,7 @@
 package com.xuekai.entity;
 
 import lombok.Data;
+import org.springframework.stereotype.Component;
 
 /**
  * @Author shixuekai
@@ -8,7 +9,12 @@ import lombok.Data;
  * @Description
  **/
 @Data
+@Component
 public class Student extends People{
     private Integer shengao;
 
+
+    public void speak(){
+        System.out.println("hello");
+    }
 }
