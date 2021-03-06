@@ -9,7 +9,7 @@ public class LastDuplicateSon {
 
 
     private static int getMaxLength(String s){
-        int from =0 , to = 0 , length = 1, maxLength = 1;
+        int from =0 , to = 1 , length = 1, maxLength = 1;
 
         while (to < s.length()){
             // 找到包含重复字符的位置
