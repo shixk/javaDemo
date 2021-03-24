@@ -75,4 +75,22 @@ public class User {
         System.out.println(user.checkMsg(checker));
 
     }
+
+
+    public boolean isPalindrome(int x) {
+        Boolean flag = true;
+        String str = String.valueOf(x);
+        int i=0,j=str.length()-1;
+        while (i<j){
+            if(str.charAt(i)!=str.charAt(j)){
+                flag=false;
+                break;
+            }
+
+            i++;
+            j--;
+        }
+
+        return flag;
+    }
 }
