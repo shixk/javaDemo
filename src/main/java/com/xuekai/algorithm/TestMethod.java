@@ -1,5 +1,7 @@
 package com.xuekai.algorithm;
 
+import java.util.HashMap;
+
 /**
  * @Author shixuekai
  * @CreateDate 2021/3/22
@@ -13,6 +15,8 @@ public class TestMethod {
         String str = getCount(k++);
 
         System.out.println(str);
+
+        HashMap map = new HashMap();
     }
 
 
