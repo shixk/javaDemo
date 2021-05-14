@@ -31,5 +31,11 @@ public class LeetcodeMaxSubsequence {
         int res = getMaxResult(nums);
 
         System.out.println(res);
+
+
+//        String s1 = "8";
+//        String s2 = "123";
+//
+//        System.out.println(s1.compareTo(s2));
     }
 }

@@ -14,7 +14,8 @@ public class QuickSort {
         //获取枢轴
         int mid = getMiddle(arr,start,end);
 
-        quickSort(arr,start,mid);
+
+        quickSort(arr,start,mid-1);
         quickSort(arr,mid+1,end);
     }
 
