@@ -1,4 +1,4 @@
-package com.xuekai.algorithm;
+package com.xuekai.algorithm.listnode;
 
 import com.xuekai.entity.ListNode;
 
@@ -40,24 +40,26 @@ public class ListNodeReverse {
         node4.setNext(null);
 
         ListNode node3 = new ListNode();
-        node3.setValue(3);
+        node3.setValue(4);
         node3.setNext(node4);
 
         ListNode node2 = new ListNode();
-        node2.setValue(2);
+        node2.setValue(4);
         node2.setNext(node3);
 
         ListNode node1 = new ListNode();
-        node1.setValue(1);
+        node1.setValue(4);
         node1.setNext(node2);
 
         printList(node1);
 
         System.out.println("反转之后是");
 
-        ListNode newList = reverse1(node1);
+       // ListNode newList = reverse1(node1);
 
-        printList(newList);
+        //printList(newList);
+        printList(deleteNode(node1,4));
+
 
     }
 
@@ -69,5 +71,24 @@ public class ListNodeReverse {
             temp = temp.getNext();
         }
 
+    }
+
+
+    private static ListNode deleteNode(ListNode head,int val){
+        ListNode dummy = new ListNode();
+        dummy.setNext(head);
+
+        ListNode temp = dummy;
+
+        while (temp.getNext()!=null){
+            if(temp.getNext().getValue() == val){
+                temp.getNext().setNext(temp.getNext().getNext());
+            }else {
+                temp = temp.getNext();
+            }
+
+        }
+
+        return dummy.getNext();
     }
 }
