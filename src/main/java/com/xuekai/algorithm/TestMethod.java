@@ -1,6 +1,9 @@
 package com.xuekai.algorithm;
 
+import com.google.common.collect.Lists;
+
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * @Author shixuekai
@@ -17,6 +20,11 @@ public class TestMethod {
         System.out.println(str);
 
         HashMap map = new HashMap();
+
+
+        List<Long> idList= Lists.newArrayList();
+
+        System.out.println(idList.isEmpty());
     }
 
 

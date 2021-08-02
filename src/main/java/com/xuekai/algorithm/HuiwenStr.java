@@ -69,5 +69,12 @@ public class HuiwenStr {
         String s3 = "123ascgaa8aag";
 
         System.out.println(getLastHuiwenStr(s3));
+
+
+        String str = "158";
+
+        int i = str.charAt(2)-'0';
+
+        System.out.println(i);
     }
 }
