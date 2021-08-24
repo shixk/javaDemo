@@ -29,7 +29,10 @@ public class Txtest2 {
 
         System.out.println(result);
 
+        Long poiId = 143072327668582l;
+        Integer s = poiId.intValue();
 
+        System.out.println("int value ="+s);
     }
 
     private static List<Map<Integer,Integer>> solution(int[] arr,int k){
@@ -42,7 +45,6 @@ public class Txtest2 {
                 map.put(i,0);
             }
         }
-
 
         for(Integer i: arr){
             Integer key = k-i;
