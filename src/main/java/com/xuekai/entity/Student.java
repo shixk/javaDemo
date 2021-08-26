@@ -1,4 +1,4 @@
 package com.xuekai.entity;
 
-public class Student {
+public class Student extends People{
 }
