@@ -1,6 +1,7 @@
 package com.xuekai.test;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @Author shixuekai
@@ -8,6 +9,7 @@ import lombok.Data;
  * @Description
  **/
 @Data
+@NoArgsConstructor
 public class User {
 
     private String name;
