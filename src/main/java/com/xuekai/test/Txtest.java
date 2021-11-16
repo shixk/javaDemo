@@ -1,6 +1,11 @@
 package com.xuekai.test;
 
+import com.xuekai.entity.ListNode;
+
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
 
 /**
  * @Author shixuekai
@@ -8,59 +13,45 @@ import java.util.Arrays;
  * @Description
  **/
 public class Txtest {
-//    题目描述给定一个包含红色、白色和蓝色，一共 n 个元素的数组，原地对它们进行排序，
-//    使得相同颜色的元素相邻，并按照红色、白色、蓝色顺序排列。
-//    此题中，我们使用整数 0、 1 和 2 分别表示红色、白色和蓝色。
-//    注意:不能使用代码库中的排序函数来解决这道题。样例输入[2,0,2,1,1,0]输出 [0,0,1,1,2,2]
 
 
-    public static void main(String[] args) {
-        int[] arr = {2,0,2,1,1,3,0,0,1,2};
+    public ListNode solution(ListNode head,int k){
 
-        quickSort(arr,0,arr.length-1);
-
-        System.out.println(Arrays.toString(arr));
-
-    }
-
-
-    private static void quickSort(int[] arr,int left,int right){
-        if(left>right){
-            return;
+        //先分成k个组
+        List<ListNode> list = new ArrayList<>();
+        for(int i=0;i<k;i++){
+            ListNode node = new ListNode();
+            list.add(node);
         }
 
-        int mid = getPivot(arr,left,right);
+        int count=0;
+        ListNode cur = head;
+        //遍历链表，按照k分组
+        while(cur!=null){
+            int index = count%k;
+            ListNode node = list.get(index);
+            node.setNext(cur);
+            cur = cur.getNext();
 
-        if(left<mid-1) {
-            quickSort(arr, left, mid - 1);
+            count++;
         }
-        if(mid+1<right) {
-            quickSort(arr, mid + 1, right);
-        }
-    }
 
-
-    private static int getPivot(int[] arr,int left,int right){
-        int i = left;
-        int j = right;
-        int temp = arr[i];
-        while (i<j){
-            while (i<j && arr[j]>=temp){
-                j--;
+        //再把每个分组串联成一个链表
+        for(int i=0;i<list.size();i++){
+            //最后一个组
+            if(i == list.size()-1){
+                break;
             }
-            arr[i] = arr[j];
-
-            while (i<j && arr[i]<=temp){
-                i++;
+            ListNode last = list.get(i);
+            while (last.getNext()!=null){
+                last = last.getNext();
             }
-
-            arr[j] = arr[i];
-
+            last.setNext(list.get(i+1));
         }
+        ListNode newHead = new ListNode();
+        newHead.setNext(list.get(0));
 
-        arr[i] = temp;
-        return i;
+        return newHead.getNext();
     }
-
 
 }
