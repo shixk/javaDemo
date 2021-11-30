@@ -2,10 +2,7 @@ package com.xuekai.foryou;
 
 import com.xuekai.service.Animal;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Test {
     // 1，2，3，4
@@ -20,6 +17,17 @@ public class Test {
         System.out.println(an.showName());
 
         Set<Integer> set = new HashSet<>();
+
+
+        Random random = new Random(100);
+
+
+
+        for(int i=0;i<=20;i++){
+            int temp = random.nextInt(100);
+            System.out.println(temp);
+        }
+
 
     }
 

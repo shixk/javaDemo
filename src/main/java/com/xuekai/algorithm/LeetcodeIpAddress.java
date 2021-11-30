@@ -35,7 +35,7 @@ public class LeetcodeIpAddress {
 
         int remain = 5-k;
         //长度不够或者剩余长度超过了最大值也不行
-        if(s.length()<remain&&s.length()>(3*remain)){
+        if(s.length()<remain||s.length()>(3*remain)){
             return;
         }
 
