@@ -14,9 +14,9 @@
 - 策略模式
 - 模板模式
 
-#### LeetCode刷题
-- 数组
-- 二叉树
-- 链表
-- 字符串
+#### [LeetCode刷题](https://github.com/shixk/javaDemo/tree/master/src/main/java/com/xuekai/algorithm)
+- [数组](https://github.com/shixk/javaDemo/tree/master/src/main/java/com/xuekai/algorithm/arrays)
+- [二叉树](https://github.com/shixk/javaDemo/tree/master/src/main/java/com/xuekai/algorithm/treenode)
+- [链表](https://github.com/shixk/javaDemo/tree/master/src/main/java/com/xuekai/algorithm/listnode)
+- [字符串](https://github.com/shixk/javaDemo/tree/master/src/main/java/com/xuekai/algorithm/string)
 - 其他
