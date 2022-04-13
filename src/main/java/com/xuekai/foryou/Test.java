@@ -19,14 +19,7 @@ public class Test {
         Set<Integer> set = new HashSet<>();
 
 
-        Random random = new Random(100);
 
-
-
-        for(int i=0;i<=20;i++){
-            int temp = random.nextInt(100);
-            System.out.println(temp);
-        }
 
 
     }

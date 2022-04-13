@@ -32,7 +32,7 @@ public class FirstMissPositive {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1};
+        int[] arr = {-3,-2,0,1};
         FirstMissPositive instance = new FirstMissPositive();
         System.out.println(instance.solution(arr));
     }
