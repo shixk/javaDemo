@@ -7,7 +7,7 @@
     <!-- 模块变量 -->
     <properties>
         <!-- 各依赖的全局版本 -->
-        <spring.version>4.3.12.RELEASE</spring.version>
+        <spring.version>5.2.20.RELEASE</spring.version>
         <jackson.version>2.8.8</jackson.version>
     </properties>
 
