@@ -1,55 +1,49 @@
 package com.xuekai.test;
 
 import com.xuekai.entity.ListNode;
+import lombok.extern.slf4j.Slf4j;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * @Author shixuekai
  * @CreateDate 2021/4/20
  * @Description
  **/
+@Slf4j
 public class Txtest {
 
+    private static List<Integer> typeList = new ArrayList<>();
+    static {
+        //冒泡事件
+        typeList.add(10);
+        //首页事件
+        typeList.add(12);
+    }
 
-    public ListNode solution(ListNode head,int k){
+    public static  Random random = new Random();
+    public static void main(String[] args) {
+        String order = "";
 
-        //先分成k个组
-        List<ListNode> list = new ArrayList<>();
-        for(int i=0;i<k;i++){
-            ListNode node = new ListNode();
-            list.add(node);
-        }
+        System.out.println(order.isEmpty());
+    }
 
-        int count=0;
-        ListNode cur = head;
-        //遍历链表，按照k分组
-        while(cur!=null){
-            int index = count%k;
-            ListNode node = list.get(index);
-            node.setNext(cur);
-            cur = cur.getNext();
+    /**
+     * 获取date前第N天日期 包括date
+     *
+     * @return yyyy-MM-dd 00:00:00
+     */
+    public static Date getDataBeforeDays(Date date, int days) {
+        return Date.from(LocalDateTime.ofInstant(date.toInstant(), ZoneId.systemDefault()).withHour(0).withMinute(0)
+                .withSecond(0).withNano(0).minusDays(days - 1L).atZone(ZoneId.systemDefault()).toInstant());
+    }
 
-            count++;
-        }
-
-        //再把每个分组串联成一个链表
-        for(int i=0;i<list.size();i++){
-            //最后一个组
-            if(i == list.size()-1){
-                break;
-            }
-            ListNode last = list.get(i);
-            while (last.getNext()!=null){
-                last = last.getNext();
-            }
-            last.setNext(list.get(i+1));
-        }
-        ListNode newHead = new ListNode();
-        newHead.setNext(list.get(0));
-
-        return newHead.getNext();
+    public static Date today() {
+        return Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());
     }
 
 }

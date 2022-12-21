@@ -10,7 +10,8 @@ package com.xuekai.algorithm;
 public class LeetcodeMaxNumber {
 
     public static void main(String[] args) {
-        int[] arr = {195,23,56,235,7};
+        //int[] arr = {195,23,56,235,7,10};
+        int[] arr ={10,5,123,7,20};
         String result = getMaxNumber(arr);
 
         System.out.println(result);

@@ -33,4 +33,15 @@ public class Merge {
             nums1[x] = temp[x];
         }
     }
+
+
+    public static void main(String[] args) {
+
+        String ss = "abc";
+        int[] arr={1,2,4,5};
+        System.out.println(ss.length());
+
+        System.out.println(arr.length);
+
+    }
 }

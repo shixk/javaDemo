@@ -8,4 +8,9 @@ package com.xuekai.entity;
 public class Teacher extends People{
 
     private String course;
+
+    @Override
+    public void sayHello(){
+        System.out.println("hello my teacher :"+this.course);
+    }
 }

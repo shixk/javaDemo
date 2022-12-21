@@ -34,5 +34,10 @@ public class People {
 	public void setAge(Integer age) {
 		this.age = age;
 	}
-	
+
+
+	public void sayHello(){
+		System.out.println("hello people");
+	}
+
 }
