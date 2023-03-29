@@ -1,7 +1,5 @@
 package com.xuekai.utils;
 
-import com.sun.tools.javac.util.Pair;
-
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 

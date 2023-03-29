@@ -131,6 +131,19 @@
           <artifactId>javassist</artifactId>
           <version>3.20.0-GA</version>
       </dependency>
+
+      <!-- groovy 最小包 -->
+      <dependency>
+          <groupId>org.codehaus.groovy</groupId>
+          <artifactId>groovy</artifactId>
+          <version>2.5.5</version>
+      </dependency>
+      <dependency>
+          <groupId>org.codehaus.groovy</groupId>
+          <artifactId>groovy-jsr223</artifactId>
+          <version>2.5.5</version>
+      </dependency>
+
 	</dependencies>
 
     <build>

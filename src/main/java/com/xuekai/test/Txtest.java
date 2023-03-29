@@ -28,8 +28,8 @@ public class Txtest {
     public static  Random random = new Random();
     public static void main(String[] args) {
         String order = "";
-
-        System.out.println(order.isEmpty());
+        System.out.println(UUID.randomUUID().toString());
+        //System.out.println(order.isEmpty());
     }
 
     /**
